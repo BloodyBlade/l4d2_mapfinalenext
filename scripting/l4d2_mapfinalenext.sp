@@ -128,6 +128,7 @@ void IsAllowed()
 	if(!bHooked && bPluginOn)
 	{
 		bHooked = true;
+		ConVarsChanged(null, "", "");
 		HookEvent("round_start", Event_RoundStart, EventHookMode_PostNoCopy);
 		HookEvent("finale_win", Event_FinalWin, EventHookMode_PostNoCopy);
 	}
